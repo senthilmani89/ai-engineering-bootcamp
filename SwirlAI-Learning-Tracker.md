@@ -13,6 +13,16 @@ Last updated: 24 October 2026 (UK)
 - At each checkpoint, record the current source, what was covered, unresolved questions, and the exact next step. Update this same tracker rather than creating duplicate trackers.
 - Read this tracker when resuming. Update it after a substantive learning segment or change of direction; preserve the existing history.
 
+## Maven source tracking agreement
+
+- Maven Cohort 6 is the primary course source: https://maven.com/swirl-ai/end-to-end-ai-engineering/6/home
+- At the start of future study sessions, independently check Maven for newly available chapters, recordings, transcripts, slides, hands-on instructions, announcements, and deadlines. Do not rely on the user to report what the instructor covered.
+- Read available source content before describing session coverage. A session title, date, or recording link alone does not establish what was taught. Mark unavailable or unread transcripts explicitly.
+- Maintain separate evidence for instructor coverage, topics explained together, demonstrated understanding, and practical implementation.
+- Keep this tracker updated with verified source links, gaps, and the next lesson. Do not infer learning completion from Maven checkboxes or code completion from commit titles.
+- Verified on 24 October: the 19 October Bootcamp Prep is a separate one-hour event. Sprint 0 contains six core readings, two optional readings, the 20 October Review, 22 October Build Lab, and capstone due 25 October. The separate Sprint 0 hands-on section contains 12 items.
+- Background monitoring has not been configured. Browser sign-in may require renewal; disclose access blockers without claiming sources were checked.
+
 ## Exact resume point
 
 **Track:** First live Sprint Review: Project framing, tooling overview and RAG foundations.
