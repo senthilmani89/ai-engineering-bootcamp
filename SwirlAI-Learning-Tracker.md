@@ -25,15 +25,56 @@ Last updated: 25 October 2026 (UK)
 
 ## Exact resume point
 
-**Agreed weekly order:** Follow actual live-session topics in instructor order, explain prerequisites from foundations, cross-check Maven chapters and teach uncovered material, then support weekly hands-on completion. Skip repetition only where understanding is established.
+**Weekly order:** Actual live-session sequence, explained from foundations; then cross-check Maven chapters for uncovered topics; then weekly hands-on, with supporting explanations.
 
-**Current learning:** Tokens, next-token probabilities/logits/softmax, greedy selection versus sampling, temperature, top-k, top-p, reasoning models and reasoning effort have been explained. User correctly answered token-count and top-p checks; broader independent mastery is not yet assessed.
+**Current status:** Tuesday 20 October transcript audited end-to-end on 25 October, including Q&A (00:00:26–02:03:01). The earlier declaration that Tuesday was complete was premature. Core topics have been explained, but the audited gaps below remain.
 
-**Last explanation:** Prefill versus decoding; time to first token and time between tokens. Internal reasoning can delay the first visible answer token.
+**Next step:** Restart Tuesday coverage in source order, briefly checking established concepts and teaching missing jargon. Begin with deterministic tasks versus AI, subject matter experts, and business metrics versus technical evals; then instrumentation/monitoring and improvement levers; then evaluation examples and Q&A; finally remaining LLM/latency details.
 
-**Next step:** Explain streaming and check latency understanding. Then fill remaining Tuesday evaluation gaps before working through Thursday's topics and remaining Maven readings. Preserve weekly practical progress rather than expanding theory without a boundary.
+**Already explained:** Lifecycle overview; PoC/prototype; initial historical/synthetic eval examples; failure clusters; targeted fixes/prioritisation; online/offline evals; regression testing; defining versus running evals; tokens/logits/softmax; greedy/sampling, temperature/top-k/top-p; reasoning models/effort; prefill, decoding, TTFT, inter-token/end-to-end latency and streaming. User correctly classified a replay experiment as offline, and answered token-count and top-p checks. Do not infer broad independent mastery.
 
-**Paused:** Unfinished Maven "What is RAG?" chapter. Practical completion remains unverified.
+**PDF boundary:** The 6-page foundations PDF covers lifecycle and LLM foundations before the user's evaluation recap request. The separate 5-page evaluation PDF records explanations given, but does not yet cover every Tuesday transcript example. Neither is a verified complete Tuesday reference.
+
+## Tuesday transcript coverage audit — 20 October
+
+Source:
+https://maven.com/swirl-ai/end-to-end-ai-engineering/6/syllabus/modules/9e2def/5ef922f1ba620782
+
+Audited full available Audio Transcript on 25 October. Timestamps are approximate. A transcript audit verifies recorded speech, not every visual slide or the absence of transcription errors.
+
+| Time | Actual source topic | Our teaching / required follow-up |
+|---|---|---|
+| 00:00–00:09 | Weekly repo releases, student API projects/keys and course credit, GitHub invitations, weekly slides | Administrative context; not proof that the user's setup/credit works |
+| 00:09–00:15 | Problem fit, deterministic tasks versus AI, simple PoC, SME review, business success measures, prototype and release | Lifecycle/PoC taught; explicitly define deterministic, SME, business metrics versus evals |
+| 00:15–00:23 | Instrumentation, metadata, tracing, feedback-to-trace linkage, observability, monitoring, operational/eval alerts, diagnosis, improvement levers, flywheel | Partial; teach instrumentation/metadata/monitoring distinctions and improvement jargon |
+| 00:23–00:29 | Fine-tuning outside main bootcamp, PoC/prototype Q&A, human-controlled changes and quality gates | Main human-control concept taught; define fine-tuning/context engineering/quality gate |
+| 00:29–00:33 | Operational metrics, platform/ops versus AI engineer responsibilities, AI gateway, FDE example | Not systematically taught; brief role/tool terminology explanation |
+| 00:33–00:39 | Runtime recovery with stack trace versus persistent context updates, prompt registry/context files, blast radius and risk routing, AI-assisted error analysis, CI/CD | Mostly missed; explain only at conceptual level and distinguish recovery from learning |
+| 00:39–00:47 | Eval-driven development, nondeterminism, initial evals, synthetic key dimensions, historical/golden data, evaluation versus training, TDD analogy | Core dataset ideas taught; key dimensions, golden data, nondeterminism and TDD analogy need explicit coverage |
+| 00:47–00:52 | Thumbs-down/comments, sampled trace review, silent failures, token-growth signals, failure clusters | Clustering taught; add sampling, retries, escalations, no replies and silent failure examples |
+| 00:52–00:56 | Hallucinated citations, wrong tools, malformed tool/output data, missed retrieval, off-brand tone; matching evals/fixes | Major gap: citation/groundedness, tool selection correctness, schema validation, rubric and LLM-as-judge, reranking/postprocessing/style guides |
+| 00:56–01:04 | Define vs run, online/offline, hot path, upstream/downstream regressions, signals vs evals, groundedness example | Main distinctions taught; hot path/upstream/downstream and signal-versus-eval worked example remain |
+| 01:04–01:12 | Software/AI roles, what data online evals require, actionable checks, regression dataset reuse, holdout/judge calibration mentioned and deferred | Regression/define-run taught; add actionable checks, reference needs, holdout terminology as preview only |
+| 01:12–01:16 | A/B engagement/business metrics versus evals, risk-dependent evaluation effort, free-form chat Q&A | Missed; explain engagement does not establish correctness and distinguish instructor trade-off discussion from universal rule |
+| 01:16–01:24 | Vocabulary probabilities, sampling, temperature/top-p/top-k, model parameters versus inference settings | Core taught; explicit learned weights versus per-call settings comparison useful |
+| 01:24–01:37 | Temperature zero still not guaranteed reproducible, numerical/hardware/batching caveats, judge/tool-call examples, per-call configuration, defaults, tune one control at a time, top-k=1 | Several gaps: reproducibility caveat, top-k=1, per-call settings, conservative tuning practice; qualify provider-dependent advice |
+| 01:37–01:48 | Chain-of-thought prompting history, simplified reasoning training/RL/verifiable tasks, effort choices, evaluate none vs medium, hidden reasoning and speculative provider internals | Reasoning/effort taught; chain-of-thought label, training-vs-inference, high-level RL and empirical effort comparison remain; do not present speculation as fact |
+| 01:48–01:50 | Decision / System 1 models briefly introduced, classification and structured output | Mentioned only, deferred by instructor; provide short vocabulary preview, not a full invented lesson |
+| 01:50–01:56 | Prefill/forward pass, decoding, TTFT/ITL/end-to-end, latency percentiles, reasoning within decoding, corrected slide | Core latency taught; forward pass, p50/p95/p99 and throughput remain |
+| 01:56–01:59 | Hosted versus self-hosted performance levers, model size/SLM/MoE | Mostly missed; brief explanations with qualifications; smaller does not universally guarantee faster |
+| 01:59–02:03 | RAG/context windows scheduled for Thursday, Discord/slides, tokenisation before prefill | Keep full RAG/context-window lesson in Thursday; clarify tokenisation versus prefill |
+
+### Technical qualifications to preserve
+
+- Tuesday mentions RAG-related examples (citations, grounding, reranking); full RAG foundations are deferred to Thursday. Do not say RAG was never mentioned Tuesday.
+- A hallucinated citation (invented/misassigned source reference) and an unsupported answer claim are related but distinct. The instructor's example groups them loosely.
+- Unit tests still apply to deterministic components of an AI application; statistical evals complement them.
+- Online evaluations are not inherently all LLM-based, and appropriateness depends on available evidence. Some tool-call checks can run live; do not repeat a blanket impossibility claim.
+- Top-p includes the token crossing the cumulative threshold; temperature zero/top-k=1 do not guarantee identical hosted responses.
+- Low temperature can favour consistency where supported; 'always best' and default values are not universal.
+- Reasoning training explanation was explicitly simplified. Provider routers/multiple internal reasoning chains were speculation.
+- Percentile '15th' in the transcript may be a transcription error; use correctly explained p50/p95/p99 rather than asserting what was spoken.
+- Model/provider performance, available settings and pricing require official current documentation when discussed specifically.
 
 ## Verified Thursday session source — 22 October
 
@@ -146,3 +187,5 @@ Use the actual Maven chapter order and re-check the source as needed. Some items
 - 24 October 2026: Created tracker after inconsistent switching between Maven order and session catch-up. Recorded agreed priority, coverage, gaps, and resume point. No new lesson taught during tracker creation.
 
 - 25 October 2026: Recorded foundational learning progress and verified Thursday transcript topic map and weekly deck availability. No Maven completion checkboxes changed.
+
+- 25 October 2026: Audited Tuesday's full available transcript, corrected premature completion status, and recorded all main sections, Q&A gaps and technical qualifications. PDFs remain explanations given, not complete source coverage.
