@@ -1,6 +1,6 @@
 # SwirlAI learning tracker
 
-Last updated: 24 October 2026 (UK)
+Last updated: 25 October 2026 (UK)
 
 ## Teaching agreement
 
@@ -25,15 +25,41 @@ Last updated: 24 October 2026 (UK)
 
 ## Exact resume point
 
-**Track:** First live Sprint Review: Project framing, tooling overview and RAG foundations.
+**Agreed weekly order:** Follow actual live-session topics in instructor order, explain prerequisites from foundations, cross-check Maven chapters and teach uncovered material, then support weekly hands-on completion. Skip repetition only where understanding is established.
 
-**Current section:** Evaluation-driven development, approximately 00:47-00:56 in the transcript.
+**Current learning:** Tokens, next-token probabilities/logits/softmax, greedy selection versus sampling, temperature, top-k, top-p, reasoning models and reasoning effort have been explained. User correctly answered token-count and top-p checks; broader independent mastery is not yet assessed.
 
-**Last explanation:** Production signals such as thumbs-down feedback lead us to inspect traces, group similar failures into failure-mode clusters, and define evaluations for those patterns. Our examples were unsupported refund promises and confusing instructions.
+**Last explanation:** Prefill versus decoding; time to first token and time between tokens. Internal reasoning can delay the first visible answer token.
 
-**Next step:** Briefly check understanding of failure-mode clusters; explain how a diagnosed failure informs a targeted fix and prioritisation. Then continue to online versus offline evaluations, beginning around 00:57. Build on the user's existing understanding of guardrails, groundedness, and monitoring instead of repeating everything.
+**Next step:** Explain streaming and check latency understanding. Then fill remaining Tuesday evaluation gaps before working through Thursday's topics and remaining Maven readings. Preserve weekly practical progress rather than expanding theory without a boundary.
 
-**Paused:** Maven chapter "What is RAG?". Do not move to the next chapter until this session catch-up is complete and the remaining RAG chapter gaps have been covered.
+**Paused:** Unfinished Maven "What is RAG?" chapter. Practical completion remains unverified.
+
+## Verified Thursday session source — 22 October
+
+Checked on 25 October 2026 directly in Maven's Audio Transcript panel:
+https://maven.com/swirl-ai/end-to-end-ai-engineering/6/syllabus/modules/9e2def/e31694031d20cce9
+
+The transcript is accessible and extends to approximately 02:03:40. Reviewed substantial transcript sections across the session; this is a topic map, not a claim of line-by-line review of every utterance.
+
+| Approximate time | Instructor coverage | Learning follow-up |
+|---|---|---|
+| 00:06–00:09 | Live sessions provide theory, system walkthroughs and Q&A; implementation is in weekly prerecorded hands-on videos | Use hands-on videos as the practical checklist |
+| 00:09–00:14 | Corrected latency recap: prefill, decoding, first visible token and reasoning tokens | Consolidate with our current latency lesson |
+| 00:14–00:39 | Context limits, attention intuition, masking, FlashAttention, KV cache and prompt caching | Not yet taught systematically; deep transformer maths explicitly not required |
+| 00:40–00:56 | Why RAG; private/current knowledge, context budget, retrieval sources, access control, suitability and privacy questions | Reconcile with existing RAG understanding |
+| 00:57–01:09 | Naive RAG pipeline and choices: LLM, prompts, embedding model, vector DB, search, chunking and business heuristics | Foundations covered in parts; design decisions remain |
+| 01:10–01:30 | Model routing, context/cost trade-offs, data preparation and updates, structured retrieval, SQL templates and tools | Teach missing concepts at foundational level |
+| 01:31–01:35 | Traces, spans, parent spans, recorded inputs/outputs, versions, token usage and costs | Not yet systematically taught |
+| 01:35–01:39 | Reference-based evaluation, subjective evaluation and calibration of LLM judges | Consolidate evaluation foundations |
+| 01:39–02:01 | Precision@k, recall@k, F1, MRR, context relevance/recall, faithfulness, generation evaluation and framework-specific definitions | Most details remain |
+| 02:02 | Code/LangSmith walkthrough deferred to the next week | Do not mark as covered in this live session |
+
+Weekly deck located: **Cohort-6-Sprint-0**, 147 pages:
+https://www.canva.com/design/DAHYdCRnCVE/KDQThdjtuDjaaKHIWHw3Ow/edit
+Deck opened and title/page count verified; full slide-by-slide review remains pending.
+
+Technical qualification backlog: transcript contains transcription errors and broad claims. When teaching, distinguish attention scores from cached K/V tensors, quadratic from exponential growth, KV caching from cross-request prefix caching, model-specific token limits/pricing from universal rules, and answer relevance from context relevance. Verify current provider claims against official documentation when relevant.
 
 ## Instructor session sequence and progress
 
@@ -111,10 +137,12 @@ Use the actual Maven chapter order and re-check the source as needed. Some items
 - First Sprint Review transcript: Pasted text.txt, shared by user. Approximate timestamps are navigation aids, not exact quotations.
 - Maven Cohort 6: Understanding the AI product lifecycle; Tooling overview; What is RAG? were read in this conversation.
 - Uploaded introductory deck: Cohort-6-Intro to End-to-End AI Engineering Bootcamp.pdf. Do not assume this is the weekly Sprint 0 slide deck.
-- Weekly slides are shared after the week's second live session, according to the transcript; do not claim receipt until actually supplied.
+- Sprint 0 weekly Canva deck located and opened on 25 October; 147 pages. Full slide review pending.
 - Existing revision files: SwirlAI-AI-Product-Lifecycle-Jargon-Guide.pdf; SwirlAI-Tooling-Overview-Jargon-Guide.pdf.
 - This tracker records learning progress; it does not change completion state in Maven.
 
 ## Change log
 
 - 24 October 2026: Created tracker after inconsistent switching between Maven order and session catch-up. Recorded agreed priority, coverage, gaps, and resume point. No new lesson taught during tracker creation.
+
+- 25 October 2026: Recorded foundational learning progress and verified Thursday transcript topic map and weekly deck availability. No Maven completion checkboxes changed.
