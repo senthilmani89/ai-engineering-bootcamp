@@ -1,11 +1,11 @@
 # SwirlAI learning tracker
 
-Last updated: 25 October 2026 (UK)
+Last updated: 31 October 2026 (UK)
 
 ## Teaching agreement
 
 - Follow the instructor's teaching sequence. Use the live-session transcript and weekly slides to establish what was taught, and map those topics to the Maven chapters.
-- Immediate priority: finish the gaps in the first Sprint Review before resuming the unfinished RAG chapter. Do not switch tracks silently.
+- Immediate priority: Sprint 0 hands-on. Tuesday/Thursday explanations and the Thursday-related Maven cross-check are complete as recorded in the 31 October checkpoint. Revisit theory when implementation needs it; do not restart the earlier backlog.
 - Before teaching a Maven chapter, read its actual contents. Before declaring completion, compare coverage with the source.
 - Explain one concept at a time in plain language. Keep using our fictional shop returns-policy assistant; this is our teaching example, not the instructor's project.
 - Label extra background clearly. Avoid introducing adjacent topics simply because they are related.
@@ -23,7 +23,39 @@ Last updated: 25 October 2026 (UK)
 - Verified on 24 October: the 19 October Bootcamp Prep is a separate one-hour event. Sprint 0 contains six core readings, two optional readings, the 20 October Review, 22 October Build Lab, and capstone due 25 October. The separate Sprint 0 hands-on section contains 12 items.
 - Background monitoring has not been configured. Browser sign-in may require renewal; disclose access blockers without claiming sources were checked.
 
-## Exact resume point
+## Current checkpoint — 31 October 2026
+
+**Resume here: Sprint 0 hands-on.** The user has confirmed they are starting. No new hands-on task has yet been reported complete.
+
+### Coverage and evidence
+
+- Tuesday: connected study guide created after the session catch-up. Earlier audit tables below are retained as historical records; they are not the current teaching queue.
+- Thursday: remaining transcript topics explained, followed by a successful signed-in Maven cross-check of four related lessons: RAG; embeddings/vector databases; observability; retrieval/generation evaluation. This source check was reported in the preceding study conversation, not repeated during this tracker update.
+- Maven additions subsequently explained: overlapping/tumbling windows and parent-child retrieval; reranking, filtering, compression and lost-in-the-middle; cosine similarity, dot product, Euclidean distance and normalisation; Flat/HNSW/LSH/IVF/PQ; structured logs, prompt versions, aggregate metrics and alerts; reference-based/reference-free evaluation, token-level F1 and judge costs.
+- Thursday explanations also covered attention/KV and prompt caching, retrieval choices and access control, data maintenance, model routing/fallback, spans, judge calibration, precision/recall/F1/MRR, context relevance/recall, groundedness, answer relevance and BLEU/ROUGE limitations.
+- User reports understanding the explanations but feeling overwhelmed and not retaining all details. Keep calculations and index algorithms as reference; use implementation to consolidate.
+- Demonstrated in short recall checks: retrieval supplies evidence; wrong evidence is a retrieval failure; unsupported output despite correct evidence is a generation failure; tracing/observability reveals what happened; groundedness evals check support. These checks do not establish independent practical mastery.
+
+### Exact next step
+
+Follow the Sprint 0 prerecorded hands-on sequence:
+1. Working with the project repository.
+2. Setting up the project, comparing with the existing environment.
+3. Exploring Amazon Items Dataset.
+4. Embeddings and Vector DB Introduction, then continue the course checklist.
+
+User is starting independently; support questions, code and errors as they arise. Existing setup uses Python 3.12.10, a virtual environment and pip/requirements.txt rather than uv. Do not mark videos, exercises or capstone complete without evidence.
+
+### References and boundaries
+
+- Study references created: SwirlAI-Tuesday-Connected-Guide.pdf and SwirlAI-Thursday-Connected-Guide.pdf. Thursday uses a connected narrative with deeper calculations in an appendix.
+- Project source PDFs supplied for assistant reference: 01-Intro to End-to-End AI Engineering Bootcamp.pdf; 02-Sprint-0.pdf; 03-Sprint-0.pdf. Their availability does not establish a complete slide-by-slide review.
+- Optional readings and later weeks are not marked complete. No Maven completion checkboxes were changed by this tracker update.
+- The sections below preserve the 25 October audit and earlier progress snapshot. Their “remaining”, “not started” and “next step” labels are historical where superseded by this checkpoint.
+
+## Historical checkpoint and audits — 25 October 2026
+
+## Exact resume point (historical)
 
 **Weekly order:** Actual live-session sequence, explained from foundations; then cross-check Maven chapters for uncovered topics; then weekly hands-on, with supporting explanations.
 
@@ -189,3 +221,5 @@ Use the actual Maven chapter order and re-check the source as needed. Some items
 - 25 October 2026: Recorded foundational learning progress and verified Thursday transcript topic map and weekly deck availability. No Maven completion checkboxes changed.
 
 - 25 October 2026: Audited Tuesday's full available transcript, corrected premature completion status, and recorded all main sections, Q&A gaps and technical qualifications. PDFs remain explanations given, not complete source coverage.
+
+- 31 October 2026: Reconciled tracker with subsequent study conversation: theory catch-up and Thursday Maven additions explained; connected guides created; user now starting Sprint 0 hands-on. Recorded recall evidence, retention concerns and practical next steps. Retained earlier audits as history; no practical completion inferred.
